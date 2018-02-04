@@ -1,0 +1,39 @@
+project:
+  name: simple-game
+  version: 0.1
+  description: A simple game application
+
+server:
+  port: 8080
+  contextPath: /simple-game
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:simple-game;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;INIT=CREATE SCHEMA IF NOT EXISTS GAME_SCHEMA
+    platform: h2
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: true
+        use_sql_comments: true
+        format_sql: true
+
+
+  h2:
+    console:
+      enabled: true
+      path: /console
+      settings:
+        trace: false
+        web-allow-others: false
+logging:
+  file: simple-game.log
+  org.hibernate: INFO
+  com.example.simplegame: DEBUG
+
