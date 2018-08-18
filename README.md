@@ -1,5 +1,5 @@
 # simple-game
-A simple game service using RESTful 
+A simple game service using RESTful - NetEnt 
 
 
 Create a RESTful service using which players can play a simple game described
