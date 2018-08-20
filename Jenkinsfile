@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Docker Image') {
 	steps {
-	  sh 'docker build -t sthallapalli/simple-game:1.0.0'
+	  sh 'sudo docker build -t sthallapalli/simple-game:1.0.0 .'
 	}
     }
   }
