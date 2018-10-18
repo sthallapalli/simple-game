@@ -7,16 +7,28 @@ pipeline {
 	}
 
 	stages {
+	    
 		stage('Build') {
 		  steps {
 		    sh 'mvn clean install -DskipTests'
 		  }
 		}
-		stage('Tests') {
+/*		stage('Tests') {
 		  steps {
 		    sh 'mvn test'
 		  }
-		}
+		}*/
+/*		stage('Copy Archive') {
+             steps {
+                script {
+                    step ([$class: 'CopyArtifact',
+                    projectName: 'simple-game-pipleline',
+                    filter: "target/simple-game*.zip",
+                    target: '/usr']);
+                }
+            }
+		}*/
+     
 		stage('Docker Image') {
 			steps {
 			  sh 'echo $USER'  
