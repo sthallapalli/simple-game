@@ -26,7 +26,6 @@ import com.example.simplegame.framework.pojo.builder.GenericPojoBuilder;
 @SpringBootTest(classes = SimpleGameApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class SimpleGameApplicationIntegrationTest {
 
-	
 	@LocalServerPort
 	private int port;
 
